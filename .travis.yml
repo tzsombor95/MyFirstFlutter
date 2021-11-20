@@ -22,3 +22,10 @@ before_deploy:
   - cd .. 
   - zip -r app.ipa Payload 
   - popd
+deploy:
+ provider: pages
+ skip_cleanup: true
+ github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+ keep_history: true
+ on:
+  branch: main
