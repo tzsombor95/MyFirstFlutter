@@ -1,14 +1,14 @@
 os: osx 
 language: generic 
 before_script: 
- - brew update 
- - brew install --HEAD usbmuxd 
- - brew unlink usbmuxd 
- - brew link usbmuxd 
- - brew install --HEAD libimobiledevice 
- - brew install ideviceinstaller 
- - brew install ios-deploy 
- - git clone https://github.com/flutter/flutter.git -b beta --depth 1 
+ - travis_wait brew update
+ - travis_wait brew install --HEAD usbmuxd
+ - travis_wait brew unlink usbmuxd
+ - travis_wait brew link usbmuxd
+ - travis_wait brew install --HEAD libimobiledevice
+ - travis_wait brew install ideviceinstaller
+ - travis_wait brew install ios-deploy
+ - travis_wait git clone https://github.com/flutter/flutter.git -b beta --depth 1
 script: 
  - flutter/bin/flutter build ios --debug --no-codesign
 cache: 
