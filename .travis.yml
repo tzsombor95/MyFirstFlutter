@@ -2,7 +2,6 @@ os: osx
 language: generic
 osx_image: xcode8.3
 before_script:
- - pip install six
  - travis_wait brew update
  - travis_wait brew install --HEAD usbmuxd
  - travis_wait brew unlink usbmuxd
