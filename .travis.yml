@@ -1,11 +1,11 @@
 os: osx 
 language: generic
-osx_image: xcode12.3
+osx_image: xcode13.1
 before_script:
  - travis_wait brew update
- - travis_wait brew install --HEAD usbmuxd
- - travis_wait brew unlink usbmuxd
- - travis_wait brew link usbmuxd
+ #- travis_wait brew install --HEAD usbmuxd
+ #- travis_wait brew unlink usbmuxd
+ #- travis_wait brew link usbmuxd
  - travis_wait brew install --HEAD libimobiledevice
  - travis_wait brew install ideviceinstaller
  - travis_wait brew install ios-deploy
