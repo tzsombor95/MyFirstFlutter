@@ -1,3 +1,4 @@
+https://app.travis-ci.com/tzsombor95/MyFirstFlutter.svg?branch=main
 # myfirstapp
 
 A new Flutter application.
