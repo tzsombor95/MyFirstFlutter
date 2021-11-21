@@ -1,5 +1,5 @@
-https://app.travis-ci.com/tzsombor95/MyFirstFlutter.svg?branch=main
 # myfirstapp
+![Build Status](https://app.travis-ci.com/tzsombor95/MyFirstFlutter.svg?branch=main)
 
 A new Flutter application.
 
