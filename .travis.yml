@@ -6,6 +6,13 @@ before_script:
  #- travis_wait brew install --HEAD usbmuxd
  #- travis_wait brew unlink usbmuxd
  #- travis_wait brew link usbmuxd
+ - brew install libplist || echo 'fails because libimobiledevice-glue is missing'
+ - git clone https://github.com/libimobiledevice/libimobiledevice-glue.git
+ - cd libimobiledevice-glue
+ - ./autogen.sh
+ - make
+ - sudo make install
+ - cd ..
  - travis_wait brew install --HEAD libimobiledevice
  - travis_wait brew install ideviceinstaller
  - travis_wait brew install ios-deploy
