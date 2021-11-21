@@ -3,8 +3,8 @@ language: generic
 osx_image: xcode13.1
 before_script:
  - travis_wait brew update
- - brew uninstall --ignore-dependencies libimobiledevice
- - brew uninstall --ignore-dependencies usbmuxd
+ #- brew uninstall --ignore-dependencies libimobiledevice
+ #- brew uninstall --ignore-dependencies usbmuxd
  - travis_wait brew install --HEAD usbmuxd
  - travis_wait brew unlink usbmuxd
  - travis_wait brew link usbmuxd
