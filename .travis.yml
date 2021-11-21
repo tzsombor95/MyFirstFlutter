@@ -9,6 +9,7 @@ before_script:
  - brew install libplist || echo 'fails because libimobiledevice-glue is missing'
  - git clone https://github.com/libimobiledevice/libimobiledevice-glue.git
  - cd libimobiledevice-glue
+ - git checkout 499a5578b15235d00bc492068635de45bec1807d
  - ./autogen.sh
  - make
  - sudo make install
