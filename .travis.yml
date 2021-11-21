@@ -9,12 +9,11 @@ before_script:
  - brew install libplist || echo 'fails because libimobiledevice-glue is missing'
  - git clone https://github.com/libimobiledevice/libimobiledevice-glue.git
  - cd libimobiledevice-glue
- - git checkout 499a5578b15235d00bc492068635de45bec1807d
  - ./autogen.sh
  - make
  - sudo make install
  - cd ..
- - travis_wait brew install --HEAD libimobiledevice
+ - travis_wait brew install --15f8652126664e3a4b980e5d1c039b9053ce8566 libimobiledevice
  - travis_wait brew install ideviceinstaller
  - travis_wait brew install ios-deploy
  - travis_wait git clone https://github.com/flutter/flutter.git -b beta --depth 1
